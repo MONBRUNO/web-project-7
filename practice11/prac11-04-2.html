@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진과 이름 출력</title>
+</head>
+<body>
+    <h3>사진과 이름 출력</h3>
+    <hr>
+    <canvas id="myCanvas" style="background-color:aliceblue" width="1000" height="600"></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d");
+
+
+        let img = new Image();
+        img.onload = function () {
+            context.drawImage(img, 20, 20, 200, 200);
+            context.font = "italic 80px forte";
+            context.fillStyle = "magenta";
+            context.strokeStyle = "blue";
+            context.lineWidth = 2;
+            context.fillText("RyuYeunWoo", 50, 200);
+            context.strokeText("RyuYeunWoo", 50, 200);
+        }
+        img.src = "/류연우1민d.jpg";
+    </script>
+</body>
+</html>
